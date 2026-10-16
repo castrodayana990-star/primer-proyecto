@@ -6,6 +6,7 @@ function Tarjeta({icono, descripcion, titulo, horas, destacada}){
             <span className='tarjeta-icono'>{icono}</span>
             <h3>{titulo}</h3>
             <p>{descripcion}</p>
+            <span className='tarjeta-horas'>{horas} horas</span>
 
         </article>
     )

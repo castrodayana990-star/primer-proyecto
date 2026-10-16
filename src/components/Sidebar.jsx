@@ -6,7 +6,7 @@ function Sidebar() {
                 <nav>
                     <ul className="sidebar-menu">
                         <li><a href="#">🏠 Inicio</a></li>
-                        <li><a href="#">🧟 Mi perfil</a></li>
+                        <li><a href="#">👤 Mi perfil</a></li>
                         <li><a href="#">💻 Tecnología</a></li>
                         <li><a href="#">💸 Recurso</a></li>
                         <li><a href="#">🌎 Contacto</a></li>

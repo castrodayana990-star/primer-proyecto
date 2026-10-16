@@ -1,4 +1,4 @@
-import fotoPerfil from '../images/descarga.jpg'
+import fotoPerfil from '../images/imagen dayana.avif'
 
 function MenuUsuario(){
     const nombre = 'Dayana Castro'
