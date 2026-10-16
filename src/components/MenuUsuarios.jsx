@@ -1,7 +1,7 @@
 import fotoPerfil from '../images/descarga.jpg'
 
 function MenuUsuario(){
-    const nombre = 'Alejandro Guamanga'
+    const nombre = 'Dayana Castro'
     const rol = 'Aprendiz'
 
     return(

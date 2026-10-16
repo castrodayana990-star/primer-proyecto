@@ -17,8 +17,31 @@ function App() {
           <h2>Bienvenido al Programa {programa}</h2>
           <Presentacion />
           <section className="tarjetas">
-            <Tarjeta />
-            <Tarjeta />
+
+            <Tarjeta 
+            icono="⚛️"
+            titulo="React"
+            descripcion="herramienta de javascrpt para construir interfaces con componentes"
+            horas="120"
+            destacada={true}
+            />
+
+            <Tarjeta
+            icono="⚡"
+            titulo="Vite"
+            descripcion="Herramienta de desarrollo para crear aplicaciones web modernas"
+            horas="60"
+            destacada={false}
+            />
+
+            <Tarjeta 
+            icono="🔍"
+            titulo="Eslint"
+            descripcion="revisa la calidad del video de"
+            horas="20"
+            destacada={true}
+            />
+          
           </section>
         </main>
       </div>
