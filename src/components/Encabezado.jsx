@@ -1,6 +1,6 @@
 import MenuUsuario from "./MenuUsuarios"
 
-function Encabezado(){
+function Encabezado({usuario}){
     return(
         <header className="encabezado">
             <h1>Mi primer APP con React</h1>
@@ -9,7 +9,7 @@ function Encabezado(){
                 <a href='#'>Tecnologías</a>
                 <a href='#'>Contacto</a>
             </nav>
-            <MenuUsuario />
+            <MenuUsuario usuario={usuario} />
 
         </header>
     )

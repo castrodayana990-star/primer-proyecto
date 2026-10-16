@@ -1,13 +1,13 @@
-function Presentacion(){
+function Presentacion({usuario}){ 
     return(
         <article className='presentacion'>
-                <h1> Hola, Soy Dayana Castro</h1>
-                <p> Vivo en las guacas - Popayán-Cauca</p>
+                <h1> Hola, soy {usuario.nombre}</h1>
+                 <p> Vivo en { usuario.ubicacion}</p>
                 <h3>Mis datos son:</h3>
                 <ul>
                     <>
-                    <li> DayanaCastro@sena.edu.co</li>
-                    <li> Telefono:+57 323 5068524</li>
+                    <li> {usuario.correo}</li>
+                    <li> {usuario.telefono}</li>
                     </>
                 </ul>
                 <h3></h3>

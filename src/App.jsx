@@ -4,18 +4,29 @@ import Sidebar from "./components/Sidebar";
 import Presentacion from "./components/Presentacion";
 import Tarjeta from "./components/Tarjeta";
 import PiePagina from "./components/PiePagina";
+import fotoPerfil from './Images/imagen dayana.avif';
+
 
 function App() {
   const programa = "Analisis y Desarrollo de Software";
 
+  const usuario = {
+  nombre: 'Dayana Castro',
+  rol: 'Aprendiz ADSO',
+  foto: fotoPerfil,
+  correo: "dayanacastro@sena.edu.co",
+  telefono: "+57 323 5068524",
+  ubicacion: "Las Guacas - Popayán-Cauca"
+}
+
   return (
     <div className="app-padre">
-      <Encabezado />
+      <Encabezado usuario={usuario} />
       <div className="app-layout">
-        <Sidebar />
+        <Sidebar usuario={usuario} />
         <main className="contenido">
           <h2>Bienvenido al Programa {programa}</h2>
-          <Presentacion />
+          <Presentacion usuario={usuario} />
           <section className="tarjetas">
 
             <Tarjeta 
