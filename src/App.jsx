@@ -1,23 +1,23 @@
 import './App.css';
 import Encabezado from "./components/Encabezado";
 import Sidebar from "./components/Sidebar";
-import Presentacion from "./components/Presentacion";
-import Tarjeta from "./components/Tarjeta";
 import PiePagina from "./components/PiePagina";
-import fotoPerfil from './Images/imagen dayana.avif';
+import fotoPerfil from './images/imagen dayana.avif';
+import Inicio from "./paginas/Inicio"
+import Perfil from './paginas/Perfil';
+import Tecnologias from "./paginas/Tecnologias";
+import { Route, Routes } from 'react-router';
 
 
 function App() {
-  const programa = "Analisis y Desarrollo de Software";
-
-  const usuario = {
-  nombre: 'Dayana Castro',
-  rol: 'Aprendiz ADSO',
-  foto: fotoPerfil,
-  correo: "dayanacastro@sena.edu.co",
-  telefono: "+57 323 5068524",
-  ubicacion: "Las Guacas - Popayán-Cauca"
-}
+  const usuario ={
+    nombre: 'Dayana castro',
+    rol: 'Aprendiz ADSO',
+    foto: fotoPerfil,
+    correo: 'dayanacastro@gmail.com',
+    telefono: '+57 3227006423',
+    ubicacion: 'Camilo Torres - Popayán - Cauca',
+  }
 
   return (
     <div className="app-padre">
@@ -25,35 +25,11 @@ function App() {
       <div className="app-layout">
         <Sidebar usuario={usuario} />
         <main className="contenido">
-          <h2>Bienvenido al Programa {programa}</h2>
-          <Presentacion usuario={usuario} />
-          <section className="tarjetas">
-
-            <Tarjeta 
-            icono="⚛️"
-            titulo="React"
-            descripcion="herramienta de javascrpt para construir interfaces con componentes"
-            horas="120"
-            destacada={true}
-            />
-
-            <Tarjeta
-            icono="⚡"
-            titulo="Vite"
-            descripcion="Herramienta de desarrollo para crear aplicaciones web modernas"
-            horas="60"
-            destacada={false}
-            />
-
-            <Tarjeta 
-            icono="🔍"
-            titulo="Eslint"
-            descripcion="revisa la calidad del video de"
-            horas="20"
-            destacada={true}
-            />
-          
-          </section>
+          <Routes>
+            <Route path="/" element={<Inicio />} />
+            <Route path="/perfil" element={<Perfil usuario={usuario} />} />
+            <Route path="/tecnologias" element={<Tecnologias />} />
+          </Routes>
         </main>
       </div>
 

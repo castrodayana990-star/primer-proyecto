@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import MenuUsuario from "./MenuUsuarios"
 
 function Encabezado({usuario}){
@@ -5,9 +6,9 @@ function Encabezado({usuario}){
         <header className="encabezado">
             <h1>Mi primer APP con React</h1>
             <nav>
-                <a href='#'>Inicio</a>
-                <a href='#'>Tecnologías</a>
-                <a href='#'>Contacto</a>
+                <Link to="/">Inicio</Link>
+                <Link to="/tecnologias">Tecnologías</Link>
+                <a href={`mailto:${usuario.correo}`}>Contacto</a>
             </nav>
             <MenuUsuario usuario={usuario} />
 

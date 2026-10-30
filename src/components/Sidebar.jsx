@@ -1,16 +1,21 @@
-function Sidebar({usuario}) {
+import { Link } from "react-router";
+import { opcionesMenu } from "../data/menu.js";
+
+function Sidebar({ usuario}) {
     return (
         <aside className="sidebar">
-            <h2> hola, {usuario.nombre}</h2>
+            <h2>Hola, {usuario.nombre}</h2>
             <div>
                 <h3 className="sidebar-titulo">Menú</h3>
                 <nav>
                     <ul className="sidebar-menu">
-                        <li><a href="#">🏠 Inicio</a></li>
-                        <li><a href="#">👤 Mi perfil</a></li>
-                        <li><a href="#">💻 Tecnología</a></li>
-                        <li><a href="#">💸 Recurso</a></li>
-                        <li><a href="#">🌎 Contacto</a></li>
+                        {opcionesMenu.map((opcion) =>(
+                            <li key={opcion.id}>
+                                <Link to={opcion.url}>
+                                    {opcion.icono} {opcion.texto}
+                                </Link>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
             </div>

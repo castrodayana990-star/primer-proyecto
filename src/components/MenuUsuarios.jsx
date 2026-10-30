@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 function MenuUsuario({ usuario }) {
   const { nombre, rol, foto, correo } = usuario;
 
@@ -20,18 +22,10 @@ function MenuUsuario({ usuario }) {
 
       <ul className="menu-desplegable">
         <li>
-          <a href="#">🧍 Mi perfil</a>
+          <Link to="/perfil">🧍 Mi perfil</Link>
         </li>
         <li>
-          <a href="#">⚙️ Configuración</a>
-        </li>
-        <li>
-            <a href="#">📧 correo</a>
-        </li>
-        <li>
-          <a href="#" className="cerrar-session">
-            🚪 Cerrar sesión
-          </a>
+          <a href={`mailto:${correo}`}>📧 Correo</a>
         </li>
       </ul>
     </div>

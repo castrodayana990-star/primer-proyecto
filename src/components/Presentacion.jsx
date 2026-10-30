@@ -1,13 +1,13 @@
-function Presentacion({usuario}){ 
+function Presentacion({usuario}){
     return(
         <article className='presentacion'>
-                <h1> Hola, soy {usuario.nombre}</h1>
-                 <p> Vivo en { usuario.ubicacion}</p>
+                <h1> Hola, Soy {usuario.nombre}</h1>
                 <h3>Mis datos son:</h3>
                 <ul>
                     <>
-                    <li> {usuario.correo}</li>
-                    <li> {usuario.telefono}</li>
+                    <li> Vivo en {usuario.ubicacion}</li>
+                    <li> Mi correo: {usuario.correo}</li>
+                    <li> Contacto: {usuario.telefono}</li>
                     </>
                 </ul>
                 <h3></h3>
